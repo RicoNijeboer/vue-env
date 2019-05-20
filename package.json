@@ -1,6 +1,6 @@
 {
   "name": "simple-vue-env",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A package that exposed your env-variables through an easily accessible function.",
   "main": "index.js",
   "scripts": {
