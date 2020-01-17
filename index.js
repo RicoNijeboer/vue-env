@@ -8,19 +8,24 @@ export function env(key, defaultValue) {
         return environment[key];
     }
 
-    const vueAppKey = `${prefix}${key}`;
+    const vueAppKey = `VUE_APP_${key}`;
 
     if (existingKeys.includes(vueAppKey)) {
         return environment[vueAppKey];
+    }
+
+    const mixAppKey = `MIX_${key}`;
+
+    if (existingKeys.includes(mixAppKey)) {
+        return environment[mixAppKey];
     }
 
     return defaultValue;
 }
 
 export default {
-    install(Vue, config = { prefix: 'VUE_APP_' }) {
+    install(Vue) {
         Vue.prototype.$env = env;
-
-        prefix = config.prefix;
     },
 };
+

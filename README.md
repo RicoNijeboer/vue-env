@@ -12,9 +12,7 @@ To install this package follow the following steps.
    import Vue from 'vue';
    import SimpleVueEnv from 'simple-vue-env';
 
-   Vue.use(SimpleVueEnv, {
-       prefix: 'VUE_APP_',
-   });
+   Vue.use(SimpleVueEnv);
 
    ...
 
@@ -26,7 +24,7 @@ To install this package follow the following steps.
 
 ## Environment Variables
 If you want to create a custom environment variable you can add it to your `.env` file,
-but make sure to prefix every key with `VUE_APP_` (or whatever prefix you chose).
+but make sure to prefix every key with `VUE_APP_` or `MIX_`.
 
 ## Getting the value
 If you want to get the value of an environment variable (`VUE_APP_EMAIL` for example) and log it to the console.
